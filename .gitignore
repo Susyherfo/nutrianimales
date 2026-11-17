@@ -1,5 +1,49 @@
+# Configuracion y secretos locales
 .env
-*.pem
+.env.*
+!.env.example
+.secrets/
+*.secret
+*.pgpass
+*rbac-secrets*.json
+
+# Certificados, solicitudes y claves privadas
+postgres/certs/
 *.key
-ssl/*.crt
+*.pem
+*.crt
+*.cer
+*.csr
+*.srl
+*.p12
+*.pfx
+
+# Respaldos y exportaciones locales
 *.bak
+*.dump
+*.backup
+*.sql.gz
+*.tar
+backups/
+backup*.sql
+*_backup.sql
+respaldo*.sql
+postgres/estructura_actual.sql
+
+# Entornos locales de pruebas
+.postgres-test/
+prueba_tls/
+docker-compose.test.yml
+
+# Configuracion local del editor
+.vscode/
+
+n8n/certificates/
+
+# Persona 5: bitacoras y archivos temporales
+escenarios_ataque/evidencias/bitacora.csv
+escenarios_ataque/evidencias/bitacora_bash.log
+escenarios_ataque/observability/logs/*.log
+**/__pycache__/
+**/*.pyc
+.DS_Store
